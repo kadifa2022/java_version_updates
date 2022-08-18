@@ -15,11 +15,18 @@ public class Main {
         System.out.println(list);
 
         //descending  order
-        Collections.sort(list, new MyComparator());
+        Collections.sort(list, new MyComparator()); //overloading sorting methode
         System.out.println(list);
 
-        Collections.sort(list,((o1,o2)->(o1>o2)?-1:(o1 <o2) ? 1:0));
+        Collections.sort(list,((o1,o2)->(o1>o2)?-1:(o1 <o2) ? 1:0));//we pas the action through lambda expression
 
+        //ascending order
+        list.sort((o1, o2) -> o1.compareTo(o2));
+        System.out.println(list);
+
+        //de ascending
+        list.sort((o2, o1) -> o1.compareTo(o2));
+        System.out.println(list);
 
 
 
