@@ -1,9 +1,6 @@
 package com.cydeo;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 public class FunctionalInterface {// functional Interface ready interfaces -created -parameter and return type
 
@@ -41,6 +38,20 @@ public class FunctionalInterface {// functional Interface ready interfaces -crea
         //ACCEPTING OBJECT AND RETURNS OBJECT <>Generic
         Function<String, String> fun= s-> "Hello" + s;
         System.out.println(fun.apply("Cydeo")); //if returning something we need sout
+
+        System.out.println("******************BI FUNCTION**********************");
+        //accept two parameters and returns result
+        BiFunction<Integer, Integer, Integer> func= (x1, x2)->x1+x2;
+        System.out.println(func.apply(2,3));
+
+        System.out.println("******************SUPPLIER*********************");
+
+        //does not have any parameter and returns anything
+
+        Supplier<Double> randomValue= ()->Math.random();
+        System.out.println(randomValue.get());
+
+
 
 
 
