@@ -29,7 +29,10 @@ public class AppleTest {
         filterApple(inventory,weightApple);
 
 
+
     }
+    //task
+    //convert to ready functional interface
 
     private static List<Apple> filterApple(List<Apple> inventory, ApplePredicate applePredicate){
 
