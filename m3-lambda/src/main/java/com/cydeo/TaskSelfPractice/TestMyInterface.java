@@ -15,7 +15,7 @@ public class TestMyInterface {
         MyInterface<Integer> cube = x-> System.out.println(x * x * x);// by applying <T> GENERICS to interface, we have to specified date type when calling methode in test class
         cube.function(10);
 
-        MyInterface<Integer> oddOrEven = (a)-> {// can't be primitive data-must be object -array
+        MyInterface<Integer> oddOrEven = (a)-> {// can't be primitive data-must be (Object -Array)
             if (a % 2 == 0){
                 System.out.println(a + " is even number");
             }else{
