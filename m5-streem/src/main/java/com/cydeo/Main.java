@@ -8,9 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //creating string from Array
         String [] courses = {"Java","Spring","Agile"};
+
         Stream<String> courseStream= Arrays.stream(courses);
-            //create stream with collection
+
+            //creating stream with collection
+
         List<String> courseList = Arrays.asList("Java", "Spring","Agile");
         Stream<String> courseStream2 = courseList.stream();
 
