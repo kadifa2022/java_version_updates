@@ -28,9 +28,9 @@ public class Main {
 
             Calculate s4 = new Calculator() :: findMultiply;
         // TWO PARAMETER ONE RETURN TYPE          //str is object name
-        BiFunction<String, Integer,String> func= (str, i)->str.substring(i);
+        BiFunction<String, Integer,String> func= (str, i)->str.substring(i);//instants
 
-        //implementation is coming from methode          //substring is not static methode
+        //implementation is coming from methode    //substring is not static methode
         BiFunction<String, Integer,String> func2= String ::substring;
 
         Function<Integer,Double> b = new MyClass()::method;

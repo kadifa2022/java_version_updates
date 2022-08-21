@@ -12,7 +12,7 @@ public class ConsumerPractice {
 
         names.addAll(Arrays.asList("Max", "Josh","BreAnna", "Hailey", "James","Ahmet","Muhtar","Shay"));
 
-        names.forEach((p) -> {
+        names.forEach((p) -> {//lambda
                     if (p.startsWith("J")) {
                         System.out.println(p);
                     }

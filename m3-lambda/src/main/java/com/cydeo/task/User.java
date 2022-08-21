@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor //
-@Data//@ Getter @setter @to string
+@Data//@ Getter @setter @to string-calling automatically
 
 
 
