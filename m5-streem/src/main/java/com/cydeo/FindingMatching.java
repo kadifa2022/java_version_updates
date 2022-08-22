@@ -4,6 +4,7 @@ import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class FindingMatching {
 
@@ -23,9 +24,17 @@ public class FindingMatching {
         boolean isHealthy2=DishData.getAll().stream().noneMatch(dish -> dish.getCalories() >=1000);
             System.out.println(isHealthy2);
 
-        System.out.println("FIND ANY");
+        System.out.println("FIND ANY");//to  prevent null exceptional they come up with Optional
         Optional<Dish> dish =DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
         System.out.println(dish.get());
+
+        System.out.println("FIND FIRST");
+        Optional<Dish> dish2= DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
+        System.out.println(dish2.get());
+
+        //PARALLEL STREAM (Async)
+        System.out.println(IntStream.range(0,100).parallel().findAny());
+        System.out.println(IntStream.range(0,100).parallel().findFirst());
         }
     }
 
