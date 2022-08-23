@@ -8,8 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="m6-streem" />
-        <module name="m9_new_version_update" />
         <module name="m3-lambda" />
+        <module name="m8_new_version_update" />
         <module name="m2-enum" />
         <module name="m5_comparator_interface" />
         <module name="m4-doubleColonOperator" />
