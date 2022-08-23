@@ -13,7 +13,7 @@ public class GuestTask {
                                 new Guest("Marco", true, 3),
                                 new Guest("David", false, 2),
                                 new Guest("Roger",true, 6))
-                        .collect(Collectors.teeing(
+                                 .collect(Collectors.teeing(
                                 // first collector, we select only who confirmed the participation
                                 Collectors.filtering(Guest::isParticipating,
                                         // whe want to collect only the first name in a list
