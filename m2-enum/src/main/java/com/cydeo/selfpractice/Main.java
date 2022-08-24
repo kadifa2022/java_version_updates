@@ -17,7 +17,7 @@ public class Main {
         System.out.println(c);
         System.out.println(Currency.NICKLE);
 
-        //how to get all constants
+
         System.out.println("How to get all constants");
 
         Currency[] currencies= Currency.values();
