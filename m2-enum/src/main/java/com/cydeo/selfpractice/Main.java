@@ -26,8 +26,8 @@ public class Main {
 
         }
          System.out.println("How to use switch case with enums");
-
-        switch(Currency.PENNY){
+        Currency myCurrency=Currency.DIME;
+        switch(myCurrency.PENNY){
              case PENNY:
                  System.out.println("It is 1 penny");
                  break;
