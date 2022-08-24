@@ -22,7 +22,7 @@ public class PredicatePractice {
             boolean result= str.equalsIgnoreCase(reversed);
             return result;
         };
-        Boolean r2=isPalindrome.test("Wooden Spoon");
+        Boolean r2=isPalindrome.test("Level");
         System.out.println(r2);
 
     }

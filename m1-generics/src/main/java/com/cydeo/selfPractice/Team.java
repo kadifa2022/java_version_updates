@@ -22,7 +22,7 @@ public class Team <T extends Player>{//Restriction <T> generics
             System.out.println( ((Player)player).getName() + "is already on the team");
             return false;
          }else{
-            members.add(player);
+            members.add(player);//cast
             System.out.println( ((Player)player).getName() + "picked for the team" + this.name);
             return true;
         }
