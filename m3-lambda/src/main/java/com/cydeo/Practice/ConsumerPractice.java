@@ -13,7 +13,7 @@ public class ConsumerPractice {
             }
         };
         int [] numbers= {100,200,300,400};
-        printEach.accept(numbers);
+        printEach.accept(numbers);//methode accept
 
 
         }
