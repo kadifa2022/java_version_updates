@@ -16,11 +16,25 @@ public class Main {
 
         printDoubled(items);
 
+
+        System.out.println("************************************************");
+
+        FootballPlayer joe = new FootballPlayer("Joe");
+        BaseballPlayer pat= new BaseballPlayer("Pat");
+        SoccerPlayer beckham= new SoccerPlayer("Beckham");
+
+        Team <SoccerPlayer> liverpool =new Team("Liverpool"); //team is accepting any objects without <T> Type
+      //  liverpool.addPlayer(Joe);//object belongs to another Team
+       // liverpool.addPlayer(Pat);
+        liverpool.addPlayer(beckham);
+
+        Team<SoccerPlayer> brokenTeam = new Team<>(  "what kind of team is this one");
+        ///
     }
 
-    private static void printDoubled(ArrayList items){
-        for (Object i: items) {
-            System.out.println((Integer)i*2);//cast
+    private static void printDoubled(ArrayList<Integer>items){
+        for (Integer i: items) {
+            System.out.println(i*2);
             
         }
     }
