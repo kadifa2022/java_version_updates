@@ -13,15 +13,15 @@ public class StreamOperations {
         //intermediate  operation - returning stream
 
         List<Integer> list= Arrays.asList(1,2,3,4);//for Each methode
-        list.forEach(System.out::println);//we can use for inter. operation
+        list.forEach(System.out::println);// iterable i. operation
 
 
         System.out.println("---------------------filter-----------------------");
 
 
         list.stream()//filter is important
-                .filter(i-> i % 2==0)
-        .forEach(System.out::println); //for each return void
+                .filter(i-> i % 2==0)//for loop and if statement
+        .forEach(System.out::println); //forEach()- return boolean
 
 
         System.out.println("---------------------District----------------");

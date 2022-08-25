@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -16,21 +17,27 @@ public class AppleTest {
         inventory.add(new Apple(300, Color.RED));
         inventory.add(new Apple(400, Color.GREEN));
         inventory.add(new Apple(100, Color.RED));
-        //sort
-        Comparator<Apple> sortApple= comparing((Apple apple)->apple.getWeight());
-        inventory.sort(sortApple);
+
+        // interface Comparator  have comparing() and compare Object - lambda action
+        Comparator<Apple> sortApple= comparing((Apple apple)->apple.getWeight());//compare()methode
+        inventory.sort(sortApple);// sorting object by comparing
         System.out.println(inventory);
 
-        inventory.sort(comparing(Apple::getWeight));
+
+        inventory.sort(comparing(Apple::getWeight));//
         System.out.println(inventory);
 
         System.out.println("------------------Reverse-----------------");
 
         inventory.sort(comparing(Apple::getWeight).reversed());
         System.out.println(inventory);
+
+
         System.out.println("-----------------Channing-------------------");
 
-        inventory.sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getColor));
+        inventory
+                .sort(comparing(Apple::getWeight)//comparing() and lambda  channing
+                        .reversed().thenComparing(Apple::getColor));
 
 
     }
