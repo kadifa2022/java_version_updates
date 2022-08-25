@@ -1,6 +1,7 @@
 package cydeo.Practice;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -41,6 +42,9 @@ public class Main {
         Function<Integer,Double> b= new MyClass()::methode;
           //accepting class as parameter and don't need new keyword
         BiFunction<MyClass,Integer,Double> b1= MyClass::methode;
+
+        Consumer<Integer> display = i-> System.out.println(i); //static
+        Consumer<Integer> display2 = System.out::println; 
 
 
 
