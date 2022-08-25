@@ -18,18 +18,18 @@ public class OrangeTest {
         inventory.add(new Orange(400, Color.GREEN));
         inventory.add(new Orange(100, Color.RED));
 
-        //implementation lambda
+        //implementation lambda -Interface  accepting orange and returning string
         OrangeFormatter orangeLambda= orange-> "An orange of " + orange.getWeight() + "g";
 
         //call methode
         prettyPrintApple(inventory,orangeLambda);
 
-        //second solution passing action directly
+        //second solution passing action directly -same output  as Orange Formatter
         prettyPrintApple(inventory,orange-> "An orange of " + orange.getWeight() + "g");
 
         System.out.println("****************************************************");
 
-        //passing curly bracket it's will be more than one statement/line
+        //passing curly bracket if is  more than one statement/line
         OrangeFormatter fancyFormatter = orange -> {
 
             String ch = orange.getWeight()>200 ? "Heavy" : "Light";
@@ -43,7 +43,8 @@ public class OrangeTest {
     //task
     //convert to ready functional interface
 
-        private static void prettyPrintApple(List<Orange> inventory, OrangeFormatter formatter){
+                                //methode List<>inventory and interface
+        private static void prettyPrintApple(List<Orange> inventory, OrangeFormatter formatter){//interface
             for (Orange orange:inventory) {
                 String output = formatter.accept(orange);
                 System.out.println(output);

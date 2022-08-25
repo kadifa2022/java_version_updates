@@ -6,7 +6,7 @@ import com.cydeo.task.Orange;
 
 public interface OrangeFormatter {//2
 
-    String accept(Orange orange); //
+    String accept(Orange orange);
 
 
 }

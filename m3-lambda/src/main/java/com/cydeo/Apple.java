@@ -9,7 +9,7 @@ import lombok.*;
 
 public class Apple {
 
-    private int weight;
+    private int weight;//getWeight()
     private Color color;
 
 

@@ -14,13 +14,13 @@ public class MemberTest {
         Person p3 = new Person("Tom", 23,Gender.MALE);
         Person p4 = new Person("Ally", 19,Gender.FEMALE);
 
-        //6a create list
+        //6a create list -add to inventory
         List<Person> personList = Arrays.asList(p1,p2,p3,p4);
 
-        //9 return boolean checkMember - Interface
+        //9 crate lambda -Interface    action
         CheckMember checkMember = p -> p.getGender()==Gender.MALE && p.getAge() >=18 && p.getAge()<=25;
 
-        //10
+        //10 print methode
         print(personList,checkMember);
 
             //same thing as #9 just passing directly action --lambda--implementation of test method
@@ -34,7 +34,7 @@ public class MemberTest {
     // 7 create methode
     private static void print(List<Person> personList, CheckMember checkMember){
 
-       //8 create list and forEach loop and if statement
+       //8 create methode and forEach loop and if statement
 
         List<Person>result = new ArrayList<>();
         for (Person person:personList) {

@@ -4,7 +4,7 @@ import java.util.function.*;
 
 public class FunctionalInterface {// functional Interface ready interfaces -created -parameter and return type
 
-                                   // if we don't find // create own
+                                   // if we don't find one // create your  own
 
     public static void main(String[] args) {
 

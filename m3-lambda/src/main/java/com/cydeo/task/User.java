@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor //
-@Data//@ Getter @setter @to string-calling automatically
+@AllArgsConstructor//2:48 day 45 to see User clas
+@Data//@ Getter @setter @to string
 
 
 

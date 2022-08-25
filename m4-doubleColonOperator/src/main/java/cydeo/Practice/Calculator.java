@@ -3,7 +3,7 @@ package cydeo.Practice;
 public class Calculator {
 
 
-    public static void findSum(int x, int y){
+    public static void findSum(int x, int y){//static methode
 
         System.out.println(" sum" + (x +y));
     }
