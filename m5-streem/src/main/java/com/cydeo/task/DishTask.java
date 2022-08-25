@@ -20,6 +20,7 @@ public class DishTask {
                 .forEach(System.out::println);
 
 
+
         //print the length of the name of each dish//map for each
 
         DishData.getAll().stream()
