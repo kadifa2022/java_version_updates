@@ -11,7 +11,7 @@ public class Main {
 
         //Ascending order//java provide us interface comparator
 
-        Collections.sort(list);
+        Collections.sort(list);//comparator interface sort()
         System.out.println(list);
 
         //descending  order
@@ -21,7 +21,7 @@ public class Main {
         Collections.sort(list,((o1,o2)->(o1>o2)?-1:(o1 <o2) ? 1:0));//we pas the action through lambda expression
 
         //ascending order
-        list.sort((o1, o2) -> o1.compareTo(o2));
+        list.sort((o1, o2) -> o1.compareTo(o2));//compare()
         System.out.println(list);
 
         //de ascending
