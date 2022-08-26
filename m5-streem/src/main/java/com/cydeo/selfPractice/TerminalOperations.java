@@ -2,6 +2,8 @@ package com.cydeo.selfPractice;
 
 import jdk.swing.interop.SwingInterOpUtils;
 
+import java.util.Optional;
+
 public class TerminalOperations {
 
     public static void main(String[] args) {
@@ -22,6 +24,21 @@ public class TerminalOperations {
 
             boolean isHealthy2=DishData.getAll().stream().noneMatch(dish -> dish.getCalories()>=1000);
             System.out.println(isHealthy2);
+
+            System.out.println("FIND ANY");//is going to the stream based on filtering condition
+            Optional<Dish> dish = DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
+            System.out.println(dish.get());// return type is coming with Option// to prevent null exception
+
+            System.out.println("FIND FIRST");
+            Optional<Dish> dish2 = DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
+            System.out.println(dish2.get());
+
+
+
+
+
+
+
 
         }
 
