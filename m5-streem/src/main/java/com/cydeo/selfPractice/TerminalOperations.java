@@ -5,13 +5,14 @@ import jdk.swing.interop.SwingInterOpUtils;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class TerminalOperations {
 
-    public static void main(String[] args) {
+    public static <Optiaonal> void main(String[] args) {
 
 
 
@@ -52,7 +53,19 @@ public class TerminalOperations {
             Optional<String>findAny=list2.stream().filter(s->s.startsWith("J")).findAny();
 
             System.out.println(findFirst.get());
-            System.out.println(findAny.get());//Jill is random picked
+            System.out.println(findAny.get());//Jill is picked (Acync) picked
+
+            System.out.println( "------------MIN----------");//ACCEPTING Comparator
+
+            Optional<Dish> dMin=DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+                //WITH OPTIONAL .get()
+            System.out.println(dish.get());
+
+            System.out.println("---------------MAX-----------------");
+
+            Optional<Dish> dMax=DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+
+            System.out.println(dMax);
 
 
 
