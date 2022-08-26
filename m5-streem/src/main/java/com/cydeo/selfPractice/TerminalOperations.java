@@ -61,7 +61,7 @@ public class TerminalOperations {
                 //WITH OPTIONAL .get()
             System.out.println(dish.get());
 
-            System.out.println("---------------MAX-----------------");
+            System.out.println("---------------MAX-----------------");//accepting Comparator
 
             Optional<Dish> dMax=DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
 
