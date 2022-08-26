@@ -1,8 +1,13 @@
 package com.cydeo.selfPractice;
 
+import com.cydeo.FindingMatching;
 import jdk.swing.interop.SwingInterOpUtils;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class TerminalOperations {
 
@@ -33,8 +38,21 @@ public class TerminalOperations {
             Optional<Dish> dish2 = DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
             System.out.println(dish2.get());
 
+            //Parallel Streams (Async)
+            System.out.println(IntStream.range(0,100).parallel().findAny());
+            System.out.println(IntStream.range(0,100).parallel().findFirst());
 
+           // List<String> list1= Arrays.asList("Johny", "David","Jack","Duke","Jill","Danny","Julia","Jenissh","Divna");
+           // List<String> list2= Arrays.asList("Johny", "David","Jack","Duke","Jill","Danny","Julia","Jenissh","Divna");
 
+            List<String> list1= Arrays.asList("Johny", "David","Jack","Duke","Jill","Danny","Julia","Jenissh","Divna");
+            List<String> list2= Arrays.asList("Johny", "David","Jack","Duke","Jill","Danny","Julia","Jenissh","Divna");
+
+            Optional<String> findFirst=list1.stream().filter(s->s.startsWith("D")).findFirst();
+            Optional<String>findAny=list2.stream().filter(s->s.startsWith("J")).findAny();
+
+            System.out.println(findFirst.get());
+            System.out.println(findAny.get());//Jill is random picked
 
 
 
