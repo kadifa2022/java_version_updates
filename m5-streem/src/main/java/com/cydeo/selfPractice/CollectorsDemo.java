@@ -45,7 +45,33 @@ public class CollectorsDemo {
 
         Map<String,Integer>dishMap = DishData.getAll().stream()
                 .collect(Collectors.toMap(Dish::getName, Dish::getCalories));
+
         System.out.println(dishMap);
+
+        //summitingInt(): returns a collector that produces the sum of a Integer-Value function
+
+        Integer sum= DishData.getAll().stream()
+                .collect(Collectors.summingInt(Dish::getCalories));
+        System.out.println(sum);
+
+        //counting(): returns a Collector that counts the number of the elements
+
+        Long evenCount=numbers.stream()
+                .filter(x-> x%2==0)
+                .collect(Collectors.counting());
+        System.out.println(evenCount);
+
+        //averagingInt(ToIntFunction): returns the average of the integer passed values
+
+        Double calorieAverage=DishData.getAll().stream()
+                .collect(Collectors.averagingInt(Dish::getCalories));
+
+        System.out.println(calorieAverage);
+
+        //
+
+
+
 
 
 
