@@ -1,6 +1,9 @@
 package com.cydeo.selfPractice;
 
 import java.util.Comparator;
+import java.util.stream.Stream;
+
+import static java.util.Comparator.comparing;
 
 public class DishTask {
 
@@ -40,9 +43,13 @@ public class DishTask {
 
         DishData.getAll().stream()
                 .filter(dish -> dish.getCalories()<400)
-                .sorted((Comparator.comparing(Dish::getCalories).reversed()))//to reverse
+                .sorted(comparing(Dish::getCalories).reversed())//static -to reverse
                 .map(Dish::getName)
                 .forEach(System.out::println);
+
+        //Stream<Dish> dishStream=DishData.getAll().stream();
+       // String str="Java";
+       // int n= 5;
 
 
 
