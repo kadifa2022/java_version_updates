@@ -76,6 +76,23 @@ public class CollectorsDemo {
                 .collect(Collectors.groupingBy(Dish::getType));
         System.out.println(dishType);
 
+        //joining(): is used to join various elements of a character array into a single object
+
+        List<String> course= Arrays.asList("Java", "JS", "TS");
+        String  names = course.stream()
+                .collect(Collectors.joining());
+        System.out.println(names);//combining
+
+        //partitioningBy(): is used to partition  a stream of objects (or set of elements) based on given predicate
+
+        Map<Boolean,List<Dish>> veggieDish2=DishData.getAll().stream()
+                .collect(Collectors.partitioningBy(Dish::isVegetarian));
+
+        System.out.println(veggieDish2);
+
+
+
+
 
 
 
