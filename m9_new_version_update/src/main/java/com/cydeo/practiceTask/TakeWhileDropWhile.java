@@ -1,10 +1,13 @@
 package com.cydeo.practiceTask;
 
 import java.math.BigDecimal;
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static com.cydeo.java9.TakeWhileDropWhile.getStocksBelowFiveHundred;
 
 public class TakeWhileDropWhile {
 
@@ -13,8 +16,46 @@ public class TakeWhileDropWhile {
         List<Stock> stocks= getStocks();
         System.out.println("Stock sorted  \n" + stocks);
 
+        List<String>stockBelow500Filter= getStocksBelowFiveHundredFilter(stocks);
+        System.out.println("Filter output :" + stockBelow500Filter);
+
+        List<String>stockBelow500= getStocksBelowFiveHundred(stocks);
+        System.out.println("Filter output: " + stockBelow500);
+
+        List<String>stockAbove500 = getStocksAboveFiveHundred(stocks);
+        System.out.println("Filter output : " + stockAbove500);
+
     }
 
+    public static List<String>getStocksBelowFiveHundredFilter (List<Stock> stocks) {
+        return stocks.stream()
+                .peek(stock -> System.out.println("Filter processing: " + stock))
+                .filter(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .map(Stock::getName)
+                .collect(Collectors.toList());
+
+    }
+        public static List<String> getStocksBelowFiveHundred(List<Stock>stocks){
+            return stocks.stream()
+                    .peek(stock -> System.out.println("TakeWhile Processing:" + stock))
+                    .takeWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                    .map(Stock::getName)
+                    .collect(Collectors.toList());
+    }
+
+    public static List<String> getStocksAboveFiveHundred(List<Stock>stocks){
+        return stocks.stream()
+                .peek(stock -> System.out.println("DropWhile Processing: " + stock))
+                .dropWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .map(Stock::getName)
+                .collect(Collectors.toList());
+
+
+    }
+
+    public static boolean isStockLessThanFiveHundred(Stock stock){
+        return stock.getValue().compareTo(BigDecimal.valueOf(500))<0;
+    }
 
 
 
