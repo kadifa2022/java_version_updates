@@ -89,6 +89,11 @@ public class CollectorsDemo {
                 .collect(Collectors.partitioningBy(Dish::isVegetarian));
 
         System.out.println(veggieDish2);
+        //GroupingBy(): is used for grouping objects by some property and storing results into a map instance
+
+        Map<Type,List<Dish>> dishType2=DishData.getAll().stream()
+                .collect(Collectors.groupingBy(Dish::getType));
+
 
 
 
