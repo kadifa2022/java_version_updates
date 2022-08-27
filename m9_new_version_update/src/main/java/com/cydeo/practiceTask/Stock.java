@@ -1,15 +1,20 @@
-package com.cydeo.java9;
+package com.cydeo.practiceTask;
 
 import java.math.BigDecimal;
 
 public class Stock {
+
+
     private final String name;
-    private final BigDecimal value; //i
+    private final BigDecimal value;
+
 
     public Stock(String name, BigDecimal value) {
         this.name = name;
         this.value = value;
     }
+
+
 
     public String getName() {
         return name;
@@ -26,5 +31,6 @@ public class Stock {
                 ", value=" + value +
                 '}';
     }
-}
 
+
+}

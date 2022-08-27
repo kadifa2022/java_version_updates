@@ -12,7 +12,7 @@ public class TakeWhileDropWhile {
         List<Stock> stocks = getStocks();
         System.out.println("Stocks sorted: \n" + stocks);
 
-        //Using Filter
+        //Using Filter -creating list of stream()
         List<String> stockBelow500Filter = getStocksBelowFiveHundredFilter(stocks);
         System.out.println("Filter output:" + stockBelow500Filter);
 
@@ -28,15 +28,15 @@ public class TakeWhileDropWhile {
 
     public static List<String> getStocksBelowFiveHundredFilter(List<Stock> stocks){
         return stocks.stream()
-                .peek(stock -> System.out.println("Filter proccessing : " + stock))
-                .filter(TakeWhileDropWhile::isStockLessThanFiveHundred)
+                .peek(stock -> System.out.println("Filter processing : " + stock))
+                .filter(TakeWhileDropWhile::isStockLessThanFiveHundred) //predicate and calling
                 .map(Stock::getName)
                 .collect(Collectors.toList());
     }
 
     public static List<String> getStocksBelowFiveHundred(List<Stock> stocks){
         return stocks.stream()
-                .peek(stock -> System.out.println("takeWhile proccessing : " + stock))
+                .peek(stock -> System.out.println("takeWhile processing : " + stock))
                 .takeWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
                 .map(Stock::getName)
                 .collect(Collectors.toList());
@@ -44,7 +44,7 @@ public class TakeWhileDropWhile {
 
     public static List<String> getStocksAboveFiveHundred(List<Stock> stocks){
         return stocks.stream()
-                .peek(stock -> System.out.println("dropWhile proccessing : " + stock))
+                .peek(stock -> System.out.println("dropWhile processing : " + stock))
                 .dropWhile(TakeWhileDropWhile::isStockLessThanFiveHundred)
                 .map(Stock::getName)
                 .collect(Collectors.toList());
@@ -65,7 +65,7 @@ public class TakeWhileDropWhile {
         stocks.add(new Stock("Instagram", BigDecimal.valueOf(100)));
 
         return stocks.stream()
-                .sorted(Comparator.comparing(Stock::getValue))
+                .sorted(Comparator.comparing(Stock::getValue))//they sorted stream and return to the list
                 .collect(Collectors.toList());
     }
 }
