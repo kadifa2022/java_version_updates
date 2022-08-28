@@ -30,7 +30,18 @@ public class SwitchCaseDemo {
         }
         System.out.println("********************************");
 
-        int day1 = switch (month) {//new switch
+         switch (month) {//new switch case with java 14
+            case 1, 3, 5, 7, 8, 10, 12 -> System.out.println("This month has 31 days");
+            case 4, 6, 9 -> System.out.println("This month has 30 days");
+            case 2 -> System.out.println("This month has 28 or 29 days");
+            default -> System.out.println("Invalid month");
+        };
+        System.out.println(month);
+
+
+        System.out.println("*****************************************");
+
+       int day1= switch (month) {//new switch case with java 14
             case 1, 3, 5, 7, 8, 10, 12 -> 31;
             case 4, 6, 9 -> 30;
             case 2 -> 29;
@@ -38,17 +49,20 @@ public class SwitchCaseDemo {
         };
         System.out.println(day1);
 
+
+
         System.out.println("---------------------------------------");
         int day2 = switch (month) {//switch
-            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 1, 3, 5, 7, 8, 10, 12 ->31;
+
             case 4, 6, 9 -> 30;
             case 2 -> {
 
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Enter Year");
                 int year = scanner.nextInt();
-                if (year % 4 == 0)
-                    yield 29;
+                if (year % 4 == 0)//leap year
+                    yield 29;//more than one statement we can use yield expression
                 else
                     yield 28;
             }
@@ -56,5 +70,15 @@ public class SwitchCaseDemo {
             default -> 0;
 
         };
+    }
+
+    public static record User(String name, String address) {
+
+        //you have: is immutable, final and setter is not created yet
+        //allArg constructor
+        //getter
+        //toString
+        //equals
+        //hash code
     }
 }
