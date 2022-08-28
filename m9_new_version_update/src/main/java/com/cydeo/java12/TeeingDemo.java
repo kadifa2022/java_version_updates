@@ -16,7 +16,7 @@ public class TeeingDemo {
                   new Employee(3,"C",300),
                  new Employee(4,"D",400));
 
-        HashMap<String,Employee> result = employeeList.stream().collect(Collectors.teeing(
+        HashMap<String,Employee> result = employeeList.stream().collect(Collectors.teeing(//teeing
                 Collectors.maxBy(Comparator.comparing(Employee::getSalary)),
                 Collectors.minBy(Comparator.comparing(Employee::getSalary)),
                 (e1,e2) ->{

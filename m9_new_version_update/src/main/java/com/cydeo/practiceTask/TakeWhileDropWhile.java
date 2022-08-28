@@ -54,7 +54,7 @@ public class TakeWhileDropWhile {
     }
 
     public static boolean isStockLessThanFiveHundred(Stock stock){
-        return stock.getValue().compareTo(BigDecimal.valueOf(500))<0;
+        return stock.getValue().compareTo(BigDecimal.valueOf(500))>=0;
     }
 
 
@@ -64,8 +64,8 @@ public class TakeWhileDropWhile {
         List<Stock> stocks= new ArrayList<>();
 
         stocks.add(new Stock("Apple", BigDecimal.valueOf(1000)));
-        stocks.add(new Stock("Amazon", BigDecimal.valueOf(600)));
-        stocks.add(new Stock("Tesla", BigDecimal.valueOf(300)));
+        stocks.add(new Stock("Amazon", BigDecimal.valueOf(2000)));
+        stocks.add(new Stock("Tesla", BigDecimal.valueOf(3000)));
         stocks.add(new Stock("Netflix", BigDecimal.valueOf(400)));
         stocks.add(new Stock("Facebook", BigDecimal.valueOf(500)));
         stocks.add(new Stock("Instagram", BigDecimal.valueOf(700)));

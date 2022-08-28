@@ -15,9 +15,9 @@ public class OrElseThrowDemo {
         if(str.isPresent()){
             System.out.println(str.get());
         }else{
-            //exception handling come with java10
-            System.out.println(str.orElseThrow());
-            System.out.println(str.orElseThrow(()->new RuntimeException()));
+            //exception handling-come with java10
+            System.out.println(str.orElseThrow()); //one solution
+            System.out.println(str.orElseThrow(()->new RuntimeException()));//second solution
         }
 
     }

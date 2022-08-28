@@ -10,7 +10,7 @@ public class CopyOfDemo {
     public static void main(String[] args) {
         List<Integer> numberList= Arrays.asList(2,4,6,8);
 
-        List<Integer>unmodifiableList2=List.of(2,4,6,8); //elements
-        List<Integer>unmodifiableList=List.copyOf(numberList);//list
+        List<Integer>unmodifiableList2=List.of(2,4,6,8); //elements takes value
+        List<Integer>unmodifiableList=List.copyOf(numberList);//can take directly Arraylist , map unmodifiable
     }
 }
