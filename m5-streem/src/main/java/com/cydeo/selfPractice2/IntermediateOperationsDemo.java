@@ -55,6 +55,13 @@ public class IntermediateOperationsDemo {
         list6=list6.stream().sorted().collect(Collectors.toList());
         System.out.println(list6);
 
+        //peek(Consumer):returns the elements in the stream after performing the specified operations on each element
+
+        List<Integer> list7 = new ArrayList<>();
+        list7.addAll(Arrays.asList(11,15,17,28,29,32,33,53,36,74,4,48,58,50,60,60,6,7));
+
+        list7=list7.stream().filter(p->p %5==0).peek(p-> System.out.println(p)).collect(Collectors.toList());
+        System.out.println(list7);
 
 
     }
