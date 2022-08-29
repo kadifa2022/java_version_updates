@@ -41,6 +41,13 @@ public class IntermediateOperationsDemo {
 
         System.out.println(list4);
 
+        //filter(Predicate)-predicate is interface that return type of abstract methode is boolean
+
+        List<Integer> list5 = new ArrayList<>();
+        list5.addAll(Arrays.asList(1,1,1,2,2,2,3,3,3,4,4,4,5,5,6,6,6,7));
+        list5=list5.stream().filter(p->p%3==0).collect(Collectors.toList());
+        System.out.println(list5);
+
 
     }
 
