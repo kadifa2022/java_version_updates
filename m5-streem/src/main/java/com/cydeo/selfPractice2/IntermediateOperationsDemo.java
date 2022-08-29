@@ -71,7 +71,7 @@ public class IntermediateOperationsDemo {
 
         List<String> words= new ArrayList<>();
         words.addAll(Arrays.asList("Java", "JavaScript", "Python", "Java", "C#", "JavaScript", "Python", "Java", "C#", "JavaScript"));
-
+           //
         words=words.stream().distinct().filter(p->p.startsWith("J")).map(p->p.toUpperCase()).collect(Collectors.toList());
 
         System.out.println(words);
