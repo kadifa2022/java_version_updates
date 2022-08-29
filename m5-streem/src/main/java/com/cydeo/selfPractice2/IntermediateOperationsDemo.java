@@ -48,6 +48,14 @@ public class IntermediateOperationsDemo {
         list5=list5.stream().filter(p->p%3==0).collect(Collectors.toList());
         System.out.println(list5);
 
+        //sorted(): sorting elements in stream
+
+        List<Integer> list6 = new ArrayList<>();
+        list6.addAll(Arrays.asList(10,13,1,222,2,20,3,23,32,42,4,44,5,05,62,64,62,7));
+        list6=list6.stream().sorted().collect(Collectors.toList());
+        System.out.println(list6);
+
+
 
     }
 
