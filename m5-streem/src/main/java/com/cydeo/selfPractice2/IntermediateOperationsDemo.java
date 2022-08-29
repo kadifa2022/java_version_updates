@@ -31,6 +31,17 @@ public class IntermediateOperationsDemo {
 
         list3=list3.stream().limit(5).collect(Collectors.toList());
         System.out.println(list3);
+
+        //map(function):transforming the elements in the stream by applying specified function
+
+        List<Integer> list4 = new ArrayList<>();
+        list4.addAll(Arrays.asList(1,1,1,2,2,2,3,3,3,4,4,4,5,5,6,6,6,7));
+
+        list4=list4.stream().map(p->{if (p%2!=0)return p*2; else return p;} ).collect(Collectors.toList());
+
+        System.out.println(list4);
+
+
     }
 
 }
