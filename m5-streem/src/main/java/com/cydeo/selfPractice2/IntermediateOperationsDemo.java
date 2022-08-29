@@ -63,6 +63,20 @@ public class IntermediateOperationsDemo {
         list7=list7.stream().filter(p->p %5==0).peek(p-> System.out.println(p)).collect(Collectors.toList());
         System.out.println(list7);
 
+        System.out.println("-------------------------------------");
+        //1. Eliminate duplicates
+        //2. find the string that starts with "J" ONLY
+        //3. Converts them all to upper letter
+        //store them into new list
+
+        List<String> words= new ArrayList<>();
+        words.addAll(Arrays.asList("Java", "JavaScript", "Python", "Java", "C#", "JavaScript", "Python", "Java", "C#", "JavaScript"));
+
+        words=words.stream().distinct().filter(p->p.startsWith("J")).map(p->p.toUpperCase()).collect(Collectors.toList());
+
+        System.out.println(words);
+
+
 
     }
 
