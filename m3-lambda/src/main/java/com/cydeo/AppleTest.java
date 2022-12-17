@@ -5,6 +5,7 @@ import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 public class AppleTest {
 
@@ -46,6 +47,8 @@ public class AppleTest {
         return result;
 
     }
+    //Function<String, S> fun= s-> "Hello" + s;
+        //
 
 
 }
