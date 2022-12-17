@@ -24,7 +24,7 @@ public class StreamOperations {
         .forEach(System.out::println); //forEach()- return boolean
 
 
-        System.out.println("---------------------District----------------");
+        System.out.println("---------------------Distinct----------------");
 
         Stream<Integer> str = list.stream()
                 .filter(i -> i % 2==0)
