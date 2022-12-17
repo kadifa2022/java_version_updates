@@ -15,6 +15,7 @@ public class Assignment2NumberOfPeopleInTheBus {
 
 
     public static int countPassengers(ArrayList<int[]>stops){
+
         //Runs in O(n) complexity because there is a single loop with size n
         int numOfPeople=0;
         for (int i = 0; i < stops.size(); i++) {
