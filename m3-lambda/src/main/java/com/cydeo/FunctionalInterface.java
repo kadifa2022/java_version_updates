@@ -9,6 +9,14 @@ public class FunctionalInterface {// functional Interface ready interfaces -crea
     public static void main(String[] args) {
 
         ApplePredicate ap = new ApplePredicate() {
+         public boolean test(Apple apple){
+             return  apple.getWeight()>200;
+         }
+
+        };
+
+
+        ApplePredicate ap1 = new ApplePredicate() {
 
             public boolean test(Apple apple){
                 return apple.getWeight()>200;

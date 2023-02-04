@@ -1,6 +1,7 @@
 package cydeo.selfPractice;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -39,6 +40,10 @@ public class Main {
         Function<Integer, Double> b = new MyClass()::methode;//(new MyClass()-defining object) want to call methode that I created
          //BiFunction Interface is accepting MyClass and no need to call Through methode
         BiFunction<MyClass, Integer, Double> b1= MyClass::methode;
+
+        Consumer<Integer> display= i-> System.out.println(i);
+        Consumer<Integer> display2=  System.out::println;
+
 
 
 
