@@ -34,7 +34,7 @@ public class AppleTest {
     }
     //task
     //convert to ready functional interface
-
+        ApplePredicate filterApple = apple -> apple.getColor().equals(Color.RED);
     private static List<Apple> filterApple(List<Apple> inventory, ApplePredicate applePredicate){
 
         List<Apple>  result = new ArrayList<>();
