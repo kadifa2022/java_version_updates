@@ -24,8 +24,8 @@ public class Main {
                 new Course("DS",101),
                 new Course("MS",102)
         );
-        Stream<Course> myCourseStream = myCourses.stream();//converting to stream
-        //creating Stream values
+        Stream<Course> myCourseStream = myCourses.stream();//converting to stream .stream()
+        //creating Stream values->another way of creating stream()
         Stream<Integer> stream =Stream.of(1,2,3,4);
 
 

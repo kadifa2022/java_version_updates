@@ -23,6 +23,9 @@ public class StreamOperations {
                 .filter(i-> i % 2==0)//for loop and if statement
         .forEach(System.out::println); //forEach()- return boolean
 
+        list.stream().filter(i->i % 4==2)
+                        .forEach(System.out::println);
+
 
         System.out.println("---------------------Distinct----------------");
 
@@ -30,6 +33,11 @@ public class StreamOperations {
                 .filter(i -> i % 2==0)
                 .distinct();//for unique product based on your need
         str.forEach(System.out::println);
+
+        Stream<Integer> str2 = list.stream()
+                        .filter(i->i % 2==0)
+                                .distinct();
+                str2.forEach(System.out::println);
 
         System.out.println("---------------------Limit-----------------------");
 
