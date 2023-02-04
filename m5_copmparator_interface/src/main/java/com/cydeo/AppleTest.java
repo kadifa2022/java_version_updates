@@ -19,7 +19,7 @@ public class AppleTest {
         inventory.add(new Apple(100, Color.RED));
 
         // interface Comparator  have comparing() and compare Object - lambda action
-        Comparator<Apple> sortApple= comparing((Apple apple)->apple.getWeight());//compare()methode
+        Comparator<Apple> sortApple= Comparator.comparing((Apple apple)->apple.getWeight());//compare()methode
         inventory.sort(sortApple);// sorting object by comparing
         System.out.println(inventory);
 
