@@ -68,14 +68,8 @@ public class TerminalOperations {
             System.out.println(dMax);
 
 
-
-
-
         }
 
-
-
-
-
+        
     }
 }
