@@ -20,16 +20,17 @@ public class UserTest {
 
 
         //print all users that last name starts with E
-                           // lambda --passing action
+        // lambda --passing action
         printName(users, user -> user.getLastName().startsWith("E"));
 
 
-
     }
-    private static void printName(List<User> users, Predicate<User> p){ //1.methode ( list  user, interface Predicate<User>P
-        for(User user: users){//check all users
-            if(p.test(user));//means test() methode
-            System.out.println(user.toString());
+
+    private static void printName(List<User> users, Predicate<User> p) { //1.methode ( list  user, interface Predicate<User>P
+        for (User user : users) {//check all users
+            if (p.test(user)) {//means test() methode
+                System.out.println(user.toString());
+            }
         }
     }
 }

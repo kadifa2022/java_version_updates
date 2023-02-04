@@ -42,6 +42,7 @@ public class OrangeTest {
 
     //task
     //convert to ready functional interface
+    OrangeFormatter prettyPrintApple = orange -> orange.getColor().name();
 
                                 //methode List<>inventory and interface
         private static void prettyPrintApple(List<Orange> inventory, OrangeFormatter formatter){//interface
