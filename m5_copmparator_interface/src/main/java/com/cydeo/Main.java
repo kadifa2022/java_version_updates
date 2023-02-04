@@ -11,14 +11,14 @@ public class Main {
 
         //Ascending order//java provide us interface comparator
 
-        Collections.sort(list);//comparator interface sort()
+        Collections.sort(list);//comparator interface we have compare() and sort() is from collection
         System.out.println(list);
 
         //descending  order
-        Collections.sort(list, new MyComparator()); //overloading sorting methode with two parameter
+        Collections.sort(list, new MyComparator()); //overloading sorting methode with two parameter(list, and behavior parameterization
         System.out.println(list);
-
-        Collections.sort(list,((o1,o2)->(o1>o2)?-1:(o1 <o2) ? 1:0));//we pas the action through lambda expression
+                                 // this is compareTo() method
+        Collections.sort(list,((o1,o2)->(o1>o2)?-1:(o1 <o2) ? 1:0));//we pass the action through lambda expression
 
         //ascending order
         list.sort((o1, o2) -> o1.compareTo(o2));//compareTo() lambda
