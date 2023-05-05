@@ -16,6 +16,21 @@ public class Main {
 
 
         printDoubled(items);
+
+
+        System.out.println("-----------------------------------------");
+
+         FootballPlayer joe = new FootballPlayer("Joe");// Joe is register as football player
+        BaseballPlayer  pat = new BaseballPlayer("Pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
+
+
+        Team <SoccerPlayer>liverpool = new Team("Liverpool");// Team accepting any object from any class (players)
+        //liverpool.addPlayer(joe);
+        //liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham);
+
+
     }
     private static void printDoubled(ArrayList<Integer> items){
         for (Integer i : items) {
