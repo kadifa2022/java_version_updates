@@ -47,6 +47,16 @@ public class Main {
 
 //        Apple a = new Apple(); // we need override toString() otherwise / will print hashCod
 //        System.out.println(a); /e
+
+        System.out.println("----------How to retrieve the constant value --------------");
+
+        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.QUARTER.getValue());
+        System.out.println(Currency.QUARTER.ordinal());//ordinal returns index number of constant(enum)
+
+
+
+
     }
     private static void calculate(double x, double y, Operation operation){
 
