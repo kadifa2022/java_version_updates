@@ -1,26 +1,25 @@
-package main.java.com.cydeo.task;
+package main.java.com.cydeo.task2;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class SwapValues {
-
+public class SwapValue {
     public static void main(String[] args) {
+        Integer [] a= {1,2,3,4};
 
-        Integer [] a ={1,2,3,4};
-
-        swap(a, 0,2);
+        swap(a,0,2);
         System.out.println(Arrays.toString(a));
+    }
+
+    public static  <T>  void swap( T [] a, int i, int j ){
+      T temp = a[i];
+      a[i] = a[j];
+      a[j] = temp;
 
     }
-    private static <T>void swap(T[] a, int i, int j){
-        //empty bucket
-        T temp = a[i];
-        a[i]= a[j];
-        a[j]= temp;
 
 
-    }
+
 
 
 }
