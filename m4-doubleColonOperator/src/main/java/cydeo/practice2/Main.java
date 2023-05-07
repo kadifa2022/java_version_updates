@@ -4,11 +4,12 @@ import cydeo.Practice.Calculate;
 
 import java.util.concurrent.Callable;
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {// double collen operation implementation with methods
         //Predicate<Integer> pred = (p)->p%2==0 ? true : false;}
 
         Calculate sum = (x,y)-> System.out.println(x+y);
@@ -29,6 +30,11 @@ public class Main {
 
         Function<Integer, Double> b = new MyClass()::method;
         BiFunction<MyClass, Integer, Double > b1 = MyClass::method;
+
+        Consumer<Integer> display = i-> System.out.println(i);
+        Consumer<Integer> display2 = System.out::println;
+
+        // Functional programing, lambda , double collen operator, stream
 
 
             }
