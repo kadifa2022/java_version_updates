@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class UserTest {
+public class
+UserTest {
 
     public static void main(String[] args) {
 
