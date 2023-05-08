@@ -16,7 +16,7 @@ public class EmployeeTest {
         System.out.println("------------print all phone numbers with flapMap -------------");
 
         EmployeeData.readAll()
-
+        //we can use :: collen operator when lambda call methods directly
                 .flatMap(employee -> employee.getEmpPhoneNumbers().stream())// flatMap always accept stream of stream
                 .forEach(System.out::println);
 
@@ -28,7 +28,9 @@ public class EmployeeTest {
                 .forEach(System.out::println);
 
 
+      // we can use :: collen operator when lambda call methods directly
 
+      //   declarative / functional
 
 
 
