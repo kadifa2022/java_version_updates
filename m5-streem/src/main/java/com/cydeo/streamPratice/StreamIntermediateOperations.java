@@ -1,5 +1,7 @@
 package com.cydeo.streamPratice;
 
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,11 +29,26 @@ public class StreamIntermediateOperations {
                 .forEach(System.out::println);// close stream
 
         System.out.println("---------------------Limit() -----------------------------");
-        // top product
+        //show  top product
 
         list.stream()
                 .filter(i->i %2 ==0)
                 .limit(1)
+                .forEach(System.out::println);
+
+        System.out.println("---------------------Skip() -----------------------------");
+        // skip  first element
+
+        list.stream()
+                .filter(i->i%2 ==0)
+                .skip(1)
+                .forEach(System.out::println);
+
+        System.out.println("---------------------Map() ------------------------------");
+
+        list.stream()
+                .map(number->number *2)
+                .filter(i->i%3==0)
                 .forEach(System.out::println);
 
 
