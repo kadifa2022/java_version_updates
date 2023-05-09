@@ -9,7 +9,7 @@ public class DishData {
     public static List<Dish> getAll() {
         return Arrays.asList(
                 new Dish("pork", false, 800, Type.OTHER),
-                new Dish("pork", false, 390, Type.MEAT),
+                new Dish("baklava", false, 390, Type.MEAT),
                 new Dish("beef", false, 700, Type.MEAT),
                 new Dish("chicken", false, 300, Type.MEAT),
                 new Dish("fries", true, 200, Type.OTHER),
